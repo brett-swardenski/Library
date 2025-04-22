@@ -1,7 +1,8 @@
 /*
+ * Project: Library Management System
  * Class: INFO-C 211
- * Authors:
- * Description: This is the primary class of the program.
+ * Author: Brett Swardenski
+ * Description: This is the primary class of the program that contains the 'main' method and incorporates all other classes.
  */
 
  public class Library {
