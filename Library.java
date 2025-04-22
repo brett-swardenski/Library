@@ -6,5 +6,8 @@
  */
 
  public class Library {
+
+   public static main(String[] args) {
     
+   }
  }
