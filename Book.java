@@ -6,7 +6,8 @@
 // getters, and setters.
 
  public class Book {
-
+  
+       //Attributes  
        private String title;
        private String isbn;
        private boolean isBorrowed;
@@ -17,14 +18,17 @@
         this.title = "";
         this.isbn = "";
         this.isBorrowed = false;
-    }
+      }
   
+  // Parameterized constructor
+  // Initializes the Book with title, isbn, and if it borrowed
   public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
         this.isBorrowed = false;
     }
   
+  //Getter and Setter Methods
   public String getTitle() {
         return title;
     }
