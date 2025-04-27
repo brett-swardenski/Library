@@ -11,6 +11,7 @@
        private String title;
        private String isbn;
        private boolean isBorrowed;
+       private Author author;
 
       // Default constructor
       // Initializes all attributes to empty strings
