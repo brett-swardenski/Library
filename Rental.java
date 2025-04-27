@@ -24,7 +24,8 @@ public class Rental {
 	private final int maximumBooks = 5;
 
 	// Constructor with the users ID, the books checked out, and the limitation on
-	// the amount of books
+	// the amount of books that can be checked out. 
+	//Now includes the various dates needed for assessing and calculating late fees. 
 	public Rental(int memberID, int membersBooks, Cardholder cardholder, LocalDate checkoutDate, LocalDate dueDate,
 			LocalDate returnDate, double lateFee) {
 		this.memberID = memberID;
