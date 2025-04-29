@@ -1,6 +1,7 @@
 /*
  * Class: INFO-C 211
- * Authors: Rachel Watts  
+ * Authors: Rachel Watts 
+ * Date: April 29, 2025 (Got an extension approved for family emergency)
  * Description: This class is the blueprint for collecting cardholder information.
  */
 
@@ -16,29 +17,34 @@ public class Cardholder {
 
  }
 
-// Default constructor 
+//Default constructor 
 public Cardholder() {
  this.custID = "";
  this.name = "";
 }
 
-//Getters and setters 
+//Getter for custID 
 public String getCustID() {
  return custID;
 }
 
+//Setter for custID
 public void setCustID( String custID) {
  this.custID = custID;
 }
 
+//Getter for name
  public String getName() {
   return name;
  }
 
+//Setter for name
  public void setName(String name) {
   this.name = name;
  }
- 
+
+}
+
 
 
 
