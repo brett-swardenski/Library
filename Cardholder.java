@@ -12,13 +12,15 @@ public class Cardholder {
   String name; //Cardholder's name
 
  //Constructor
+ //Sets up a new Cardholder with an ID and name
  public Cardholder(String custID, String name) {
   this.custID = custID;
   this.name = name;
 
  }
 
-//Default constructor 
+//Default constructor
+//Creates a cardholder with empty values
 public Cardholder() {
  this.custID = "";
  this.name = "";
