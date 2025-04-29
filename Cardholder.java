@@ -1,5 +1,6 @@
 /*
  * Class: INFO-C 211
+ * Project: Library Management System
  * Authors: Rachel Watts 
  * Date: April 29, 2025 (Got an extension approved for family emergency)
  * Description: This class is the blueprint for collecting cardholder information.
