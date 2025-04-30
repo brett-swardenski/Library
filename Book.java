@@ -2,8 +2,8 @@
 // Project: Library Management System
 // Author: Rebekah Tolliver
 // Date: 23 April 2025
-// This program defines a stub for the Book class with attributes, constructors, 
-// getters, and setters.
+// This program defines the Book class with attributes, constructors, 
+// getters, setters, a variable linking to the Author class, and a toString method.
 
  public class Book {
   
@@ -21,6 +21,7 @@
         this.isBorrowed = false;
         this.author = null;
       }
+  }
   
   // Parameterized constructor
   // Initializes the Book with title, isbn, and if it borrowed
@@ -63,8 +64,15 @@
     public void setAuthor() {
         this.author = author;
     }
+
+    // Returns a string representation of the Book object.
     @Override
     public String toString() {
         return "Book{" +
-               "name='" + 
+                "title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", isBorrowed=" + isBorrowed +
+                ", author='" + author + '\'' +
+                '}';
+    }
   
