@@ -19,6 +19,7 @@
         this.title = "";
         this.isbn = "";
         this.isBorrowed = false;
+        this.author = null;
       }
   
   // Parameterized constructor
@@ -27,6 +28,7 @@
         this.title = title;
         this.isbn = isbn;
         this.isBorrowed = false;
+        this.author = author;
     }
   
   //Getter and Setter Methods
@@ -53,4 +55,16 @@
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
     }
- }
+  
+    public void getAuthor() {
+        return author;
+    }
+  
+    public void setAuthor() {
+        this.author = author;
+    }
+    @Override
+    public String toString() {
+        return "Book{" +
+               "name='" + 
+  
