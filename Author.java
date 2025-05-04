@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 package librarysystem;
 
@@ -41,6 +42,21 @@ public class Author {
 
     public void addBook(Book book) {
         books.add(book);
+    }
+
+    public static class AuthorComparator
+        implements Comparator<Author> {
+        @Override 
+        public int compare(Author a1, Author a2)
+        {
+            // Compare by name
+            int nameComparison = a1.getName().compareTo(a2.getName());
+            if (nameComparison != 0) {
+                return nameComparison;
+            } else {
+                return (-1);
+            }
+        }
     }
 
     // Returns a string representation of the Author object
