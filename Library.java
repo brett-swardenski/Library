@@ -31,13 +31,11 @@ public class Library {
 	}
 
 	// method to find book by title
-	public ArrayList<Book> findByTitle() {
-		System.out.println();
-		System.out.print("Enter book title: ");
-		String title = scan.nextLine();
+	public ArrayList<Book> findByTitle(String title) {
 		ArrayList<Book> temp = new ArrayList<>();
 		for (Book b: books) {
-			if (b.title.toLowerCase().equals(title.toLowerCase()))
+			int comparison = title.compareTo(b.title);
+			if (comparison == 0)
 				temp.add(b);
 		}
 		if (temp[0] = null)
@@ -73,7 +71,8 @@ public class Library {
 	// methods to search for particular cardholder
 	public Cardholder findCHbyName(String name) {
 		for (Cardholder c: cardholders) {
-			if (c.name.toLowerCase().equals(name.toLowerCase()))
+			int comparison = name.compareTo(c.name);
+			if (comparison == 0)
 				return c;
 		}
 		return null;
