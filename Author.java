@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 package librarysystem;
 
 /*
@@ -11,17 +13,20 @@ package librarysystem;
 public class Author {
 
     private String name;
+    private ArrayList<Book> books = new ArrayList<>();
 
     // Default constructor
     // Initializes the author's name to an empty string
     public Author() {
         this.name = "";
+        this.books = new ArrayList<Book>();
     }
 
     // Parameterized constructor
     // Initializes the author with a specified name
     public Author(String name) {
         this.name = name;
+        this.books = new ArrayList<Book>();
     }
 
     // Returns the author's name
@@ -34,11 +39,20 @@ public class Author {
         this.name = name;
     }
 
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
     // Returns a string representation of the Author object
     @Override
     public String toString() {
-        return "Author{" +
-               "name='" + name + '\'' +
-               '}';
+        String temp =  "Author:" +
+                       "\nName: " + name + 
+                       "\n" +
+                       "\nBooks: ";
+        for (Book b: books) {
+            temp += b.toString();
+        }
+        return temp;
     }
 }
