@@ -45,6 +45,10 @@ public class Library {
       	return temp;
 	}
 
+	public ArrayList<Book> findByAuthor(Author author) {
+		return author.books;
+	}
+
 	// method to add a book to the 'books' arraylist and checks if the author is
 	// in the 'authors' arraylist. If not, it adds the author to it.
 	public void addBook(Book book) {
