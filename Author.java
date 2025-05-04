@@ -54,7 +54,7 @@ public class Author {
             if (nameComparison != 0) {
                 return nameComparison;
             } else {
-                return (-1);
+                return 0;
             }
         }
     }
