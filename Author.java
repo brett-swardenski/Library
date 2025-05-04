@@ -44,21 +44,6 @@ public class Author {
         books.add(book);
     }
 
-    public static class AuthorComparator
-        implements Comparator<Author> {
-        @Override 
-        public int compare(Author a1, Author a2)
-        {
-            // Compare by name
-            int nameComparison = a1.getName().compareTo(a2.getName());
-            if (nameComparison != 0) {
-                return nameComparison;
-            } else {
-                return 0;
-            }
-        }
-    }
-
     // Returns a string representation of the Author object
     @Override
     public String toString() {
