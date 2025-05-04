@@ -21,7 +21,7 @@ public class Rental {
 	private LocalDate returnDate; // The date the books were returned
 	private double lateFee; // The late fee charged if the books were returned after the due date
 	// Maximum number of books set to 5
-	private final int maximumBooks = 5;
+	public final int maximumBooks = 5;
 
 	// Constructor with the users ID, the books checked out, and the limitation on
 	// the amount of books that can be checked out. 
