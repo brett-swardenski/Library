@@ -25,7 +25,7 @@
   
   // Parameterized constructor
   // Initializes the Book with title, isbn, and if it borrowed
-  public Book(String title, String isbn) {
+  public Book(String title, String isbn, Author author) {
         this.title = title;
         this.isbn = isbn;
         this.isBorrowed = false;
@@ -61,7 +61,7 @@
         return author;
     }
   
-    public void setAuthor() {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
