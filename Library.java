@@ -9,43 +9,18 @@
  *			  
  */
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Library {
 	// ArrayLists to house book inventory and cardholder information
    	public ArrayList<Book> books = new ArrayList<>();
    	public ArrayList<Cardholder> cardholders = new ArrayList<>();
-	public static Scanner scan = new Scanner(System.in);
+	public ArrayList<Author> authors = new ArrayList<>();
 
 	// Constructor
 	public Library() {
 		books = new ArrayList<>();
 		cardholders = new ArrayList<>();
-	}
-
-	// Menu navigation
-	public void displayMainMenu() {
-		System.out.println("    Library Menu");
-		System.out.println("");
-		System.out.println("1 | Search Books");
-		System.out.println("2 | Search Cardholders");
-		System.out.println("3 | Exit");
-	}
-
-	public void searchBookMenu() {
-		System.out.println("    Search Books");
-		System.out.println("");
-		System.out.println("1 | Search by Title");
-		System.out.println("2 | Search by Author");
-		System.out.println("3 | Back");
-	}
-
-	public void searchCardholderMenu() {
-		System.out.println("   Search Cardholders");
-		System.out.println("");
-		System.out.println("1 | Search by name");
-		System.out.println("2 | Search by phone number");
-		System.out.println("3 | Back");
+		authors = new ArrayList<>();
 	}
 
 	// method to display books within an ArrayList
@@ -70,6 +45,15 @@ public class Library {
       	return temp;
 	}
 
+	// method to add a book to the 'books' arraylist and checks if the author is
+	// in the 'authors' arraylist. If not, it adds the author to it.
+	public void addBook(Book book) {
+		books.add(book);
+		Author authorCheck = book.author;
+		if (findAuthor(authorCheck) == null)
+			addAuthor(authorCheck);
+	}
+
 	// method to display cardholder information
 	public void displayCardholder(Cardholder c) {
 		System.out.println(c.toString());
@@ -83,79 +67,33 @@ public class Library {
 	}
 
 	// methods to search for particular cardholder
-	public Cardholder findCHbyName() {
-		System.out.println();
-		System.out.println("Enter name: ");
-		String name = scan.nextLine();
+	public Cardholder findCHbyName(String name) {
 		for (Cardholder c: cardholders) {
 			if (c.name.toLowerCase().equals(name.toLowerCase()))
 				return c;
 		}
-		System.out.println("This name is not associated with any cardholder.");
-		return new Cardholder();
+		return null;
 	}
 
-	public Cardholder findCHbyPhoneNumber() {
-		System.out.println();
-		System.out.println("Enter phone number: ");
-		String phoneNumber = scan.nextLine();
+	public Cardholder findCHbyPhoneNumber(String phoneNumber) {
 		for (Cardholder c: cardholders) {
-			if (c.phoneNumber.equals(phoneNumber))
+			int comparison = phoneNumber.compareTo(c.phoneNumber);
+			if (comparison == 0)
 				return c;
 		}
-		System.out.println("Phone number is not associated with any cardholder.");
-		return new Cardholder();
+		return null;
 	}
-	
 
-	// 'main' method to execute the program
-    public static main(String[] args) {
-    	boolean run = true;
-		while (run) {
-			displayMainMenu();
-			int choice = scan.nextInt();
-			switch (choice) {
-				case 1:
-					searchBookMenu();
-					choice = scan.nextInt();
-					switch (choice) {
-						case 1:
-							displayBooks(findByTitle());
-							break;
-						case 2: 
-							// pending class relationships
-							break;
-						case 3:
-							displayMainMenu();
-							break;
-						default:
-							System.out.println("Please enter a valid input.");
-							break;
-					}
-					break;
-				case 2:
-					searchCardholderMenu();
-					choice = scan.nextInt();
-					switch (choice) {
-						case 1:
-							displayCardholder(findCHbyName());
-							break;
-						case 2:
-							displayCardholder(findCHbyPhoneNumber());
-							break;
-						case 3:
-							displayMainMenu();
-							break;
-					}
-					break;
-				case 3:
-					run = false;
-					break;
-				default:
-					System.out.println("Please enter a valid input.");
-					break;
-			}
+	public Author findAuthor(Author author) {
+		for (Author a: authors) {
+			int comparison = author.compareTo(a);
+			if (comparison == 0) 
+				return a;
 		}
-		
-    }
+		return null;
+	}
+
+	public void addAuthor(Author author) {
+		authors.add(author);
+	}
 }
