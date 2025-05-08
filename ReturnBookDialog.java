@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Nicholas Raines
+ * @author Nicholas Raines and Brett Swardenski
  */
 public class ReturnBookDialog extends javax.swing.JDialog {
     
