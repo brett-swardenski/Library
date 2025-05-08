@@ -6,7 +6,7 @@ We will make a program that simulates a rental system of a library. The program 
 - Manager the users and their book(s) they have checked out
 - Manage a collection of the books for easy retrieval within the system
 - Manage the rental of books (transactions) of the library, including which user has rented which book
-- An interface to operate the program (done within the console of an IDE)
+- An interface to operate the program (utilizing JFrames and JDialog boxes with NetBeans' GUI editor)
 
 Members: 
 Brett Swardenski 
