@@ -6,7 +6,7 @@ import javax.swing.JDialog;
 
 /**
  *
- * @author Nicholas Raines
+ * @author Nicholas Raines and Voluntas Kini
  */
 public class AddBookDialog extends javax.swing.JDialog{
 
