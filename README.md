@@ -12,8 +12,8 @@ We will make a program that simulates a rental system of a library. The program 
 
 
   1.) Create a new project in NetBeans named "librarySystem"
-  2.) Create a new package within the source packages named "libraryManagement"
-  3.) add all of the files to the libraryManagement folder, including the book-3-smaller.png file.
+  2.) Create a new package within the source package named "libraryManagement"
+  3.) Add all of the files to the libraryManagement folder, including the book-3-smaller.png file.
   4.) Run from the LibraryApp class.
 
   *************************************************************
