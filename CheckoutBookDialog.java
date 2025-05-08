@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Nicholas Raines
+ * @author Nicholas Raines and Rachel Watts
  */
 public class CheckoutBookDialog extends javax.swing.JDialog {
     
