@@ -264,7 +264,6 @@ public class LibraryApp extends javax.swing.JFrame {
         addDialog.setVisible(true);
     }                                       
 
-    // Uses a string builder to show all the books in the library system via an information message
     private void viewAllBooksActionPerformed(java.awt.event.ActionEvent evt) {                                             
         StringBuilder allBooks = new StringBuilder();
         for (Book b : library.getBooks()) {
@@ -279,20 +278,18 @@ public class LibraryApp extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, scrollPane, "Our Collection", JOptionPane.INFORMATION_MESSAGE);
     }                                            
 
-    // Opens the dialog window to add a new member/cardholder
     private void addCardholderActionPerformed(java.awt.event.ActionEvent evt) {                                              
         AddCardholderDialog addMemberDialog = new AddCardholderDialog(this, true, library);
         addMemberDialog.setVisible(true);
     }                                             
 
-    // Opens the dialog window to search for a particular cardholder
     private void searchCardholderActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         SearchCardholderDialog searchDialog = new SearchCardholderDialog(this, true, library);
         searchDialog.setVisible(true);
     }                                                
 
-    // Uses a string builder to build the information message that displays when view all cardholders button is pressed
     private void viewAllCardholdersActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        // Uses a string builder to build the information message that displays when view all cardholders button is pressed
         StringBuilder allMembers = new StringBuilder();
         for (Cardholder c : library.getCardholders()) {
             allMembers.append(c.toString()).append("\n\n");
@@ -306,25 +303,20 @@ public class LibraryApp extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, scrollPane, "Our Members", JOptionPane.INFORMATION_MESSAGE);
     }                                                  
 
-    // Opens the dialog window to return a particular book
     private void returnBookActionPerformed(java.awt.event.ActionEvent evt) {                                           
         ReturnBookDialog returnDialog = new ReturnBookDialog(this, true, library);
         returnDialog.setVisible(true);
     }                                          
 
-
-  // Opens the dialog window to checkout a new book
     private void bookCheckoutActionPerformed(java.awt.event.ActionEvent evt) {                                             
         CheckoutBookDialog checkoutDialog = new CheckoutBookDialog(this, true, library);
         checkoutDialog.setVisible(true);
     }                                            
 
-    // Shows the list of students who worked on the project
     private void studentCreditsButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                     
         JOptionPane.showMessageDialog(this, "Credit for project:\n ------------------------ \n Nicholas Raines \n Rebekah Tolliver \n Voluntas Kini \n Rachel Watts \n Brett Swardenski");
     }                                                    
 
-    // Performs the save function contained within the library class, utilizing the separate SystemSave class
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
     try{
         library.saveToFile();
@@ -334,7 +326,6 @@ public class LibraryApp extends javax.swing.JFrame {
     }
     }                                          
 
-  // Performs the load function contained within the library class, utilizing again the separate SystemSave class
     private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
     try {
         library.loadFromFile();
@@ -342,8 +333,8 @@ public class LibraryApp extends javax.swing.JFrame {
     } catch (IOException | ClassNotFoundException e) {
         JOptionPane.showMessageDialog(this, "There was an issue loading." + e.getMessage());
     }
-    }                  
-  
+    }                                          
+    
     /**
      * @param args the command line arguments
      */
@@ -397,4 +388,3 @@ public class LibraryApp extends javax.swing.JFrame {
     private javax.swing.JButton viewAllCardholders;
     // End of variables declaration                   
 }
-
