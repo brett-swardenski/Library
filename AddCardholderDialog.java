@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Nicholas Raines
+ * @author Nicholas Raines and Rebekah Tolliver
  */
 
 public class AddCardholderDialog extends javax.swing.JDialog {
