@@ -8,6 +8,12 @@ We will make a program that simulates a rental system of a library. The program 
 - Manage the rental of books (transactions) of the library, including which user has rented which book
 - An interface to operate the program (utilizing JFrames and JDialog boxes with NetBeans' GUI editor)
 
+  ---------- INSTRUCTIONS FOR RUNNING THE PROGRAM  ----------
+  1.) Create a new project in NetBeans named "librarySystem"
+  2.) Create a new package within the source packages named "libraryManagement"
+  3.) add all of the files to the libraryManagement folder, including the book-3-smaller.png file.
+  4.) Run from the LibraryApp class.
+
 Members: 
 Brett Swardenski 
 Rachel Watts
