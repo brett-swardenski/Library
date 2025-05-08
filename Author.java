@@ -1,6 +1,7 @@
-import java.util.ArrayList;
+package libraryManagement;
 
-package librarysystem;
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /*
  * Project: Library Management System
@@ -10,7 +11,7 @@ package librarysystem;
  * getter and setter methods, and a toString method.
  */
 
-public class Author {
+public class Author implements Serializable{
 
     private String name;
     private ArrayList<Book> books = new ArrayList<>();
@@ -40,19 +41,22 @@ public class Author {
     }
 
     public void addBook(Book book) {
+        if(book != null) {
         books.add(book);
+        }
+    }
+    
+    public ArrayList<Book> getBooks() {
+        return books;
     }
 
     // Returns a string representation of the Author object
     @Override
-    public String toString() {
-        String temp =  "Author:" +
-                       "\nName: " + name + 
-                       "\n" +
-                       "\nBooks: ";
-        for (Book b: books) {
-            temp += b.toString();
-        }
-        return temp;
-    }
+   public String toString() {
+       StringBuilder authorString = new StringBuilder("Author:\nName: " + name + "\n\nBooks:\n");
+       for(Book b : books) {
+           authorString.append(b.toString()).append("\n");
+       }
+       return authorString.toString();
+   }
 }
